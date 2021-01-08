@@ -37,6 +37,10 @@ public class ProductDTO implements Serializable {
 		imageUri = entity.getImageUri();
 	}
 
+	public ProductDTO(ProductDTO x) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getId() {
 		return id;
 	}

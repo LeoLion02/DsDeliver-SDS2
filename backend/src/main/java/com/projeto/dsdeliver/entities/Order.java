@@ -2,6 +2,7 @@ package com.projeto.dsdeliver.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import com.projeto.dsdeliver.dto.ProductDTO;
 
 @Entity
 @Table(name="tb_order")
@@ -114,8 +117,8 @@ public class Order implements Serializable{
 	}
 
 
-	public void setProducts(Set<Product> products) {
-		this.products = products;
+	public Set<Product> getProducts() {
+		return products;
 	}
 
 
@@ -141,6 +144,7 @@ public class Order implements Serializable{
 			return false;
 		return true;
 	}
+
 
 	
 
